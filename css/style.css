@@ -47,6 +47,7 @@ body {
   border-radius: 5px;
   background: none;
   color: #0f52c7;
+  outline: none;
   cursor: pointer;
   transition: 0.2s;
 }
@@ -58,11 +59,21 @@ body {
 
 .key:active {
   background: #0b3682;
+  border-color: #0b3682;
+  border-radius: 25px;
   color: #ffffff;
 }
 
 .key_active {
   background: #0b3682;
+  border-color: #0b3682;
+  border-radius: 25px;
+  color: #ffffff;
+}
+
+.key_active:hover {
+  background: #0b3682;
+  border-color: #0b3682;
   color: #ffffff;
 }
 

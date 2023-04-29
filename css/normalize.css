@@ -159,7 +159,7 @@ img {
 
 button,
 input,
-optgroup,
+opttype,
 select,
 textarea {
   font-family: inherit; /* 1 */

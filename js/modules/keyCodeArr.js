@@ -5,7 +5,7 @@ export const keyCodeArr = [
     "keyShift": "~",
     "keyRu": "ё",
     "keyRuShift": "Ё",    
-    "group": "alphanumeric"
+    "type": "alphanumeric"
   },
   {
     "keyCode": "Digit1",
@@ -13,7 +13,7 @@ export const keyCodeArr = [
     "keyShift": "!",
     "keyRu": "1",
     "keyRuShift": "!", 
-    "group": "alphanumeric"
+    "type": "alphanumeric"
   },
   {
     "keyCode": "Digit2",
@@ -21,7 +21,7 @@ export const keyCodeArr = [
     "keyShift": "@",
     "keyRu": "2",
     "keyRuShift": "\"", 
-    "group": "alphanumeric"
+    "type": "alphanumeric"
   },
   {
     "keyCode": "Digit3",
@@ -29,7 +29,7 @@ export const keyCodeArr = [
     "keyShift": "#",
     "keyRu": "3",
     "keyRuShift": "№", 
-    "group": "alphanumeric"
+    "type": "alphanumeric"
   },
   {
     "keyCode": "Digit4",
@@ -37,7 +37,7 @@ export const keyCodeArr = [
     "keyShift": "$",
     "keyRu": "4",
     "keyRuShift": ";", 
-    "group": "alphanumeric"
+    "type": "alphanumeric"
   },
   {
     "keyCode": "Digit5",
@@ -45,7 +45,7 @@ export const keyCodeArr = [
     "keyShift": "%",
     "keyRu": "5",
     "keyRuShift": "%", 
-    "group": "alphanumeric"
+    "type": "alphanumeric"
   },
   {
     "keyCode": "Digit6",
@@ -53,7 +53,7 @@ export const keyCodeArr = [
     "keyShift": "^",
     "keyRu": "6",
     "keyRuShift": ":", 
-    "group": "alphanumeric"
+    "type": "alphanumeric"
   },
   {
     "keyCode": "Digit7",
@@ -61,7 +61,7 @@ export const keyCodeArr = [
     "keyShift": "&",
     "keyRu": "7",
     "keyRuShift": "?", 
-    "group": "alphanumeric"
+    "type": "alphanumeric"
   },
   {
     "keyCode": "Digit8",
@@ -69,7 +69,7 @@ export const keyCodeArr = [
     "keyShift": "*",
     "keyRu": "8",
     "keyRuShift": "*", 
-    "group": "alphanumeric"
+    "type": "alphanumeric"
   },
   {
     "keyCode": "Digit9",
@@ -77,7 +77,7 @@ export const keyCodeArr = [
     "keyShift": "(",
     "keyRu": "9",
     "keyRuShift": "(", 
-    "group": "alphanumeric"
+    "type": "alphanumeric"
   },
   {
     "keyCode": "Digit0",
@@ -85,7 +85,7 @@ export const keyCodeArr = [
     "keyShift": ")",
     "keyRu": "0",
     "keyRuShift": ")", 
-    "group": "alphanumeric"
+    "type": "alphanumeric"
   },
   {
     "keyCode": "Minus",
@@ -93,7 +93,7 @@ export const keyCodeArr = [
     "keyShift": "_",
     "keyRu": "-",
     "keyRuShift": "_", 
-    "group": "alphanumeric"
+    "type": "alphanumeric"
   },
   {
     "keyCode": "Equal",
@@ -101,17 +101,17 @@ export const keyCodeArr = [
     "keyShift": "+",
     "keyRu": "=",
     "keyRuShift": "+", 
-    "group": "alphanumeric"
+    "type": "alphanumeric"
   },
   {
     "keyCode": "Backspace",
     "key": "Backspace",
-    "group": "service"
+    "type": "service"
   },
   {
     "keyCode": "Tab",
     "key": "Tab",
-    "group": "service"
+    "type": "service"
   },
   {
     "keyCode": "KeyQ",
@@ -119,7 +119,7 @@ export const keyCodeArr = [
     "keyShift": "Q",
     "keyRu": "й",
     "keyRuShift": "Й", 
-    "group": "alphanumeric"
+    "type": "alphanumeric"
   },
   {
     "keyCode": "KeyW",
@@ -127,7 +127,7 @@ export const keyCodeArr = [
     "keyShift": "W",
     "keyRu": "ц",
     "keyRuShift": "Ц", 
-    "group": "alphanumeric"
+    "type": "alphanumeric"
   },
   {
     "keyCode": "KeyE",
@@ -135,7 +135,7 @@ export const keyCodeArr = [
     "keyShift": "E",
     "keyRu": "у",
     "keyRuShift": "У", 
-    "group": "alphanumeric"
+    "type": "alphanumeric"
   },
   {
     "keyCode": "KeyR",
@@ -143,7 +143,7 @@ export const keyCodeArr = [
     "keyShift": "R",
     "keyRu": "к",
     "keyRuShift": "К", 
-    "group": "alphanumeric"
+    "type": "alphanumeric"
   },
   {
     "keyCode": "KeyT",
@@ -151,7 +151,7 @@ export const keyCodeArr = [
     "keyShift": "T",
     "keyRu": "е",
     "keyRuShift": "Е", 
-    "group": "alphanumeric"
+    "type": "alphanumeric"
   },
   {
     "keyCode": "KeyY",
@@ -159,7 +159,7 @@ export const keyCodeArr = [
     "keyShift": "Y",
     "keyRu": "н",
     "keyRuShift": "Н", 
-    "group": "alphanumeric"
+    "type": "alphanumeric"
   },
   {
     "keyCode": "KeyU",
@@ -167,7 +167,7 @@ export const keyCodeArr = [
     "keyShift": "U",
     "keyRu": "г",
     "keyRuShift": "Г", 
-    "group": "alphanumeric"
+    "type": "alphanumeric"
   },
   {
     "keyCode": "KeyI",
@@ -175,7 +175,7 @@ export const keyCodeArr = [
     "keyShift": "I",
     "keyRu": "ш",
     "keyRuShift": "Ш", 
-    "group": "alphanumeric"
+    "type": "alphanumeric"
   },
   {
     "keyCode": "KeyO",
@@ -183,7 +183,7 @@ export const keyCodeArr = [
     "keyShift": "O",
     "keyRu": "щ",
     "keyRuShift": "Щ", 
-    "group": "alphanumeric"
+    "type": "alphanumeric"
   },
   {
     "keyCode": "KeyP",
@@ -191,7 +191,7 @@ export const keyCodeArr = [
     "keyShift": "P",
     "keyRu": "з",
     "keyRuShift": "З", 
-    "group": "alphanumeric"
+    "type": "alphanumeric"
   },
   {
     "keyCode": "BracketLeft",
@@ -199,7 +199,7 @@ export const keyCodeArr = [
     "keyShift": "{",
     "keyRu": "х",
     "keyRuShift": "Х", 
-    "group": "alphanumeric"
+    "type": "alphanumeric"
   },
   {
     "keyCode": "BracketRight",
@@ -207,7 +207,7 @@ export const keyCodeArr = [
     "keyShift": "}",
     "keyRu": "ъ",
     "keyRuShift": "Ъ", 
-    "group": "alphanumeric"
+    "type": "alphanumeric"
   },
   {
     "keyCode": "Backslash",
@@ -215,17 +215,17 @@ export const keyCodeArr = [
     "keyShift": "|",
     "keyRu": "\\",
     "keyRuShift": "/", 
-    "group": "alphanumeric"
+    "type": "alphanumeric"
   },
   {
     "keyCode": "Delete",
     "key": "Del",
-    "group": "service"
+    "type": "service"
   },
   {
     "keyCode": "CapsLock",
     "key": "Caps",
-    "group": "service"
+    "type": "service"
   },
   {
     "keyCode": "KeyA",
@@ -233,7 +233,7 @@ export const keyCodeArr = [
     "keyShift": "A",
     "keyRu": "ф",
     "keyRuShift": "Ф", 
-    "group": "alphanumeric"
+    "type": "alphanumeric"
   },
   {
     "keyCode": "KeyS",
@@ -241,7 +241,7 @@ export const keyCodeArr = [
     "keyShift": "S",
     "keyRu": "ы",
     "keyRuShift": "Ы", 
-    "group": "alphanumeric"
+    "type": "alphanumeric"
   },
   {
     "keyCode": "KeyD",
@@ -249,7 +249,7 @@ export const keyCodeArr = [
     "keyShift": "D",
     "keyRu": "в",
     "keyRuShift": "В", 
-    "group": "alphanumeric"
+    "type": "alphanumeric"
   },
   {
     "keyCode": "KeyF",
@@ -257,7 +257,7 @@ export const keyCodeArr = [
     "keyShift": "F",
     "keyRu": "а",
     "keyRuShift": "А", 
-    "group": "alphanumeric"
+    "type": "alphanumeric"
   },
   {
     "keyCode": "KeyG",
@@ -265,7 +265,7 @@ export const keyCodeArr = [
     "keyShift": "G",
     "keyRu": "п",
     "keyRuShift": "П", 
-    "group": "alphanumeric"
+    "type": "alphanumeric"
   },
   {
     "keyCode": "KeyH",
@@ -273,7 +273,7 @@ export const keyCodeArr = [
     "keyShift": "H",
     "keyRu": "р",
     "keyRuShift": "Р", 
-    "group": "alphanumeric"
+    "type": "alphanumeric"
   },
   {
     "keyCode": "KeyJ",
@@ -281,7 +281,7 @@ export const keyCodeArr = [
     "keyShift": "J",
     "keyRu": "о",
     "keyRuShift": "О", 
-    "group": "alphanumeric"
+    "type": "alphanumeric"
   },
   {
     "keyCode": "KeyK",
@@ -289,7 +289,7 @@ export const keyCodeArr = [
     "keyShift": "K",
     "keyRu": "л",
     "keyRuShift": "Л", 
-    "group": "alphanumeric"
+    "type": "alphanumeric"
   },
   {
     "keyCode": "KeyL",
@@ -297,7 +297,7 @@ export const keyCodeArr = [
     "keyShift": "L",
     "keyRu": "д",
     "keyRuShift": "Д", 
-    "group": "alphanumeric"
+    "type": "alphanumeric"
   },
   {
     "keyCode": "Semicolon",
@@ -305,7 +305,7 @@ export const keyCodeArr = [
     "keyShift": ":",
     "keyRu": "ж",
     "keyRuShift": "Ж", 
-    "group": "alphanumeric"
+    "type": "alphanumeric"
   },
   {
     "keyCode": "Quote",
@@ -313,17 +313,17 @@ export const keyCodeArr = [
     "keyShift": "\"",
     "keyRu": "э",
     "keyRuShift": "Э", 
-    "group": "alphanumeric"
+    "type": "alphanumeric"
   },
   {
     "keyCode": "Enter",
     "key": "Enter",
-    "group": "service"
+    "type": "service"
   },
   {
     "keyCode": "ShiftLeft",
     "key": "Shift",
-    "group": "service"
+    "type": "service"
   },
   {
     "keyCode": "KeyZ",
@@ -331,7 +331,7 @@ export const keyCodeArr = [
     "keyShift": "Z",
     "keyRu": "я",
     "keyRuShift": "Я", 
-    "group": "alphanumeric"
+    "type": "alphanumeric"
   },
   {
     "keyCode": "KeyX",
@@ -339,7 +339,7 @@ export const keyCodeArr = [
     "keyShift": "X",
     "keyRu": "ч",
     "keyRuShift": "Ч", 
-    "group": "alphanumeric"
+    "type": "alphanumeric"
   },
   {
     "keyCode": "KeyC",
@@ -347,7 +347,7 @@ export const keyCodeArr = [
     "keyShift": "C",
     "keyRu": "с",
     "keyRuShift": "С", 
-    "group": "alphanumeric"
+    "type": "alphanumeric"
   },
   {
     "keyCode": "KeyV",
@@ -355,7 +355,7 @@ export const keyCodeArr = [
     "keyShift": "V",
     "keyRu": "м",
     "keyRuShift": "М", 
-    "group": "alphanumeric"
+    "type": "alphanumeric"
   },
   {
     "keyCode": "KeyB",
@@ -363,7 +363,7 @@ export const keyCodeArr = [
     "keyShift": "B",
     "keyRu": "и",
     "keyRuShift": "И", 
-    "group": "alphanumeric"
+    "type": "alphanumeric"
   },
   {
     "keyCode": "KeyN",
@@ -371,7 +371,7 @@ export const keyCodeArr = [
     "keyShift": "N",
     "keyRu": "т",
     "keyRuShift": "Т", 
-    "group": "alphanumeric"
+    "type": "alphanumeric"
   },
   {
     "keyCode": "KeyM",
@@ -379,7 +379,7 @@ export const keyCodeArr = [
     "keyShift": "M",
     "keyRu": "ь",
     "keyRuShift": "Ь", 
-    "group": "alphanumeric"
+    "type": "alphanumeric"
   },
   {
     "keyCode": "Comma",
@@ -387,7 +387,7 @@ export const keyCodeArr = [
     "keyShift": "<",
     "keyRu": "б",
     "keyRuShift": "Б", 
-    "group": "alphanumeric"
+    "type": "alphanumeric"
   },
   {
     "keyCode": "Period",
@@ -395,7 +395,7 @@ export const keyCodeArr = [
     "keyShift": ">",
     "keyRu": "ю",
     "keyRuShift": "Ю", 
-    "group": "alphanumeric"
+    "type": "alphanumeric"
   },
   {
     "keyCode": "Slash",
@@ -403,32 +403,32 @@ export const keyCodeArr = [
     "keyShift": "?",
     "keyRu": ".",
     "keyRuShift": ",", 
-    "group": "alphanumeric"
+    "type": "alphanumeric"
   },
   {
     "keyCode": "ArrowUp",
     "key": "▲",
-    "group": "service"
+    "type": "service"
   },
   {
     "keyCode": "ShiftRight",
     "key": "Shift",
-    "group": "service"
+    "type": "service"
   },
   {
     "keyCode": "ControlLeft",
     "key": "Ctrl",
-    "group": "service"
+    "type": "service"
   },
   {
     "keyCode": "MetaLeft",
     "key": "Win",
-    "group": "service"
+    "type": "service"
   },
   {
     "keyCode": "AltLeft",
     "key": "Alt",
-    "group": "service"
+    "type": "service"
   },
   {
     "keyCode": "Space",
@@ -436,31 +436,31 @@ export const keyCodeArr = [
     "keyShift": " ",
     "keyRu": " ",
     "keyRuShift": " ", 
-    "group": "alphanumeric"
+    "type": "alphanumeric"
   },
   {
     "keyCode": "AltRight",
     "key": "Alt",
-    "group": "service"
+    "type": "service"
   },
   {
     "keyCode": "ArrowLeft",
     "key": "◄",
-    "group": "service"
+    "type": "service"
   },
   {
     "keyCode": "ArrowDown",
     "key": "▼",
-    "group": "service"
+    "type": "service"
   },
   {
     "keyCode": "ArrowRight",
     "key": "►",
-    "group": "service"
+    "type": "service"
   },
   {
     "keyCode": "ControlRight",
     "key": "Ctrl",
-    "group": "service"
+    "type": "service"
   }
 ]
