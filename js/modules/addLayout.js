@@ -19,7 +19,7 @@ const addLayout = () => {
   const discription = document.createElement('div');
   discription.className = 'discription';
 
-  const discriptionParagraph = ['Клавиатура создана в ОС Windows 11', 'Для переключения языка нажмите ...'];
+  const discriptionParagraph = ['Клавиатура создана в ОС Windows', 'Для переключения языка нажмите левые Ctrl + Alt'];
   discriptionParagraph.forEach(text => {
     const paragraph = document.createElement('p');
     paragraph.className = 'paragraph';

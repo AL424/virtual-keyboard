@@ -1,6 +1,8 @@
+import { changeLang } from './changeLang.js';
+
 // функции событий нажатия и отпуска клавиш
 
-const keydown = (event) => {
+const keydown = (event, keyCodeArr) => {
   const key = document.getElementById(event.code);
   const textarea = document.querySelector('.textarea');
   textarea.focus(); // textarea становится в фокусе
@@ -9,6 +11,10 @@ const keydown = (event) => {
   /* if (key.classList.contains('alphanumeric')) {
     textarea.value += key.textContent;
   } */ 
+
+  const isChangeLang = event.code === 'ControlLeft' && document.getElementById('AltLeft').classList.contains('key_active') ||
+                       event.code === 'AltLeft' && document.getElementById('ControlLeft').classList.contains('key_active');
+  if (isChangeLang) changeLang(keyCodeArr);
 }
 
 const keyup = (event) => {
