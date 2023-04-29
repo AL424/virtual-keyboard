@@ -10,6 +10,7 @@ const addLayout = () => {
 
   const textarea = document.createElement('textarea');
   textarea.className = 'textarea';
+  textarea.placeholder = 'Введите текст...'
 
   const keyboard = document.createElement('div');
   keyboard.className = 'keyboard';
