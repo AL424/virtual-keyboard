@@ -18,6 +18,8 @@ if (localStorage.lang === 'ru') {
   })
 }
 
+var isCapsActive = false;
+
 window.addEventListener('keydown', (event) => {
   event.preventDefault();
   keydown(event, keyCodeArr);
