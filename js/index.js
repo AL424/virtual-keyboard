@@ -26,5 +26,5 @@ window.addEventListener('keydown', (event) => {
 })
 
 window.addEventListener('keyup', (event) => {
-  keyup(event);
+  keyup(event, keyCodeArr);
 })

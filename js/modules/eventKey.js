@@ -4,6 +4,7 @@ import { changeKey } from './changeKey.js';
 // функции событий нажатия и отпуска клавиш
 
 let isCapsActive = false;
+let isShiftActive = false;
 
 const keydown = (event, keyCodeArr) => {
   if (!document.getElementById(event.code)) return;
@@ -28,21 +29,31 @@ const keydown = (event, keyCodeArr) => {
   if (event.code === 'CapsLock') {
     if (!isCapsActive) {
       isCapsActive = true;
-      changeKey(event.code, isCapsActive, false, keyCodeArr);
+      changeKey(event.code, isCapsActive, 0, keyCodeArr);
     } else if (isCapsActive) {
       isCapsActive = false;
-      changeKey(event.code, isCapsActive, false, keyCodeArr);
+      changeKey(event.code, isCapsActive, 0, keyCodeArr);
     }
   }
-  // shift 
+  // shift
+  if (event.code === 'ShiftLeft' || event.code === 'ShiftRight') {
+    isShiftActive = true;
+    changeKey(event.code, isCapsActive, localStorage.lang, keyCodeArr, isShiftActive);
+  }  
+
 }
 
-const keyup = (event) => {
+const keyup = (event, keyCodeArr) => {
   if (!document.getElementById(event.code)) return;
 
   const key = document.getElementById(event.code);
   const textarea = document.querySelector('.textarea');
   const keyCode = event.code;
+
+  if (event.code === 'ShiftLeft' || event.code === 'ShiftRight') {
+    isShiftActive = false;
+    changeKey(event.code, isCapsActive, localStorage.lang, keyCodeArr, isShiftActive);
+  }  
  
   if (!(event.code === 'CapsLock') || event.code === 'CapsLock' && !isCapsActive) key.classList.remove('key_active');
 }
