@@ -10,7 +10,7 @@ const addLayout = () => {
 
   const textarea = document.createElement('textarea');
   textarea.className = 'textarea';
-  textarea.placeholder = 'Введите текст...'
+  textarea.placeholder = 'Введите текст...';
 
   const keyboard = document.createElement('div');
   keyboard.className = 'keyboard';
@@ -20,16 +20,16 @@ const addLayout = () => {
   discription.className = 'discription';
 
   const discriptionParagraph = ['Клавиатура создана в ОС Windows', 'Для переключения языка нажмите левые Ctrl + Alt'];
-  discriptionParagraph.forEach(text => {
+  discriptionParagraph.forEach((text) => {
     const paragraph = document.createElement('p');
     paragraph.className = 'paragraph';
     paragraph.textContent = text;
 
     discription.append(paragraph);
-  })
+  });
 
   main.append(title, textarea, keyboard, discription);
   document.body.append(main);
-}
+};
 
-export {addLayout};
+export { addLayout };

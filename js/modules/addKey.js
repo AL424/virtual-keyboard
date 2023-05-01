@@ -10,6 +10,6 @@ const addKey = (code, key, type) => {
   document.getElementById('keyboard').append(button);
 
   return button;
-}
+};
 
-export {addKey};
+export { addKey };
