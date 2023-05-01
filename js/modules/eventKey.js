@@ -18,6 +18,10 @@ const keydown = (event, keyCodeArr) => {
   if (key.classList.contains('alphanumeric')) {
     textarea.value += key.textContent;
   }
+  // tab
+  if (event.code === 'Tab') textarea.value += '    ';
+  // enter 
+  if (event.code === 'Enter') textarea.value += '\n';
 
   // работа с сервисными клавишами
   // переключение языка
@@ -40,10 +44,35 @@ const keydown = (event, keyCodeArr) => {
     isShiftActive = true;
     changeKey(event.code, isCapsActive, localStorage.lang, keyCodeArr, isShiftActive);
   }  
-  // tab
-  if (event.code === 'Tab') textarea.value += '    ';
-  // enter 
-  if (event.code === 'Enter') textarea.value += '\n';
+
+  // backspase 
+  if (event.code === 'Backspace') {
+    
+    if (textarea.selectionStart === textarea.selectionEnd) {
+      let index = textarea.selectionStart - 1 < 0 ? 0 : textarea.selectionStart - 1;
+      textarea.value = textarea.value.slice(0, textarea.selectionStart - 1) + textarea.value.slice(textarea.selectionStart);
+      textarea.setSelectionRange(index, index);
+    } else {
+      let index = textarea.selectionStart;
+      textarea.value = textarea.value.slice(0, textarea.selectionStart) + textarea.value.slice(textarea.selectionEnd);
+      textarea.setSelectionRange(index, index);
+    }
+    
+  }
+  // del 
+  if (event.code === 'Delete') {
+
+    if (textarea.selectionStart === textarea.selectionEnd) {
+      let index = textarea.selectionStart;
+      textarea.value = textarea.value.slice(0, textarea.selectionStart) + textarea.value.slice(textarea.selectionStart + 1);
+      textarea.setSelectionRange(index, index);
+    } else {
+      let index = textarea.selectionStart;
+      textarea.value = textarea.value.slice(0, textarea.selectionStart) + textarea.value.slice(textarea.selectionEnd);
+      textarea.setSelectionRange(index, index);
+    }
+    
+  }
 
 }
 
