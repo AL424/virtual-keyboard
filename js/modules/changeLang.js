@@ -1,12 +1,4 @@
 // функция смены языка
-
-const changeLang = (keyCodeArr, isCapsActive) => {
-  if (localStorage.lang === 'en') localStorage.lang = 'ru';
-  else if (localStorage.lang === 'ru') localStorage.lang = 'en';
-
-  changeLangKey(keyCodeArr, localStorage.lang, isCapsActive);
-};
-
 const changeLangKey = (keyCodeArr, lang, isCapsActive) => {
   keyCodeArr.forEach((element) => {
     if (element.type === 'alphanumeric') {
@@ -15,6 +7,13 @@ const changeLangKey = (keyCodeArr, lang, isCapsActive) => {
       if (isCapsActive) key.textContent = key.textContent.toUpperCase();
     }
   });
+};
+
+const changeLang = (keyCodeArr, isCapsActive) => {
+  if (localStorage.lang === 'en') localStorage.lang = 'ru';
+  else if (localStorage.lang === 'ru') localStorage.lang = 'en';
+
+  changeLangKey(keyCodeArr, localStorage.lang, isCapsActive);
 };
 
 export { changeLang, changeLangKey };
