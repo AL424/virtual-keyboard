@@ -20,9 +20,22 @@ if (localStorage.lang === 'ru') {
 
 window.addEventListener('keydown', (event) => {
   event.preventDefault();
-  keydown(event, keyCodeArr);
+  keydown(event.code, keyCodeArr);
 })
 
 window.addEventListener('keyup', (event) => {
-  keyup(event, keyCodeArr);
+  keyup(event.code, keyCodeArr);
+})
+
+window.addEventListener('mousedown', (event) => {
+  if (event.target.classList.contains('key') && event.button === 0) {
+    event.preventDefault();
+    keydown(event.target.id, keyCodeArr);
+  }
+})
+
+window.addEventListener('mouseup', (event) => {
+  if (event.target.classList.contains('key') && event.button === 0) {
+    keyup(event.target.id, keyCodeArr);
+  }
 })

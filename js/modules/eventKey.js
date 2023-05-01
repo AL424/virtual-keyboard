@@ -6,23 +6,23 @@ import { changeKey } from './changeKey.js';
 let isCapsActive = false;
 let isShiftActive = false;
 
-const keydown = (event, keyCodeArr) => {
-  if (!document.getElementById(event.code)) return;
+const keydown = (code, keyCodeArr) => {
+  if (!document.getElementById(code)) return;
 
-  const key = document.getElementById(event.code);
+  const key = document.getElementById(code);
   const textarea = document.querySelector('.textarea');
   textarea.focus(); // textarea становится в фокусе
   key.classList.add('key_active'); // подсвечивает заданную кнопку
 
   // работа с символами
   const isSymbol = key.classList.contains('alphanumeric') || ['ArrowUp', 'ArrowLeft', 'ArrowDown', 'ArrowRight'].includes(key.id) ||
-                   event.code === 'Tab' || event.code === 'Enter';
+                   code === 'Tab' || code === 'Enter';
 
   if (isSymbol) {
     
     let symbol = key.textContent;
-    if (event.code === 'Tab') symbol = '    ';
-    if (event.code === 'Enter') symbol = '\n';
+    if (code === 'Tab') symbol = '    ';
+    if (code === 'Enter') symbol = '\n';
 
     if (textarea.selectionStart === textarea.selectionEnd) {
       let index = textarea.selectionStart + symbol.length;
@@ -40,28 +40,28 @@ const keydown = (event, keyCodeArr) => {
 
   // работа с сервисными клавишами
   // переключение языка
-  const isChangeLang = event.code === 'ControlLeft' && document.getElementById('AltLeft').classList.contains('key_active') ||
-                       event.code === 'AltLeft' && document.getElementById('ControlLeft').classList.contains('key_active');
+  const isChangeLang = code === 'ControlLeft' && document.getElementById('AltLeft').classList.contains('key_active') ||
+                       code === 'AltLeft' && document.getElementById('ControlLeft').classList.contains('key_active');
   if (isChangeLang) changeLang(keyCodeArr, isCapsActive);
 
   // caps
-  if (event.code === 'CapsLock') {
+  if (code === 'CapsLock') {
     if (!isCapsActive) {
       isCapsActive = true;
-      changeKey(event.code, isCapsActive, 0, keyCodeArr);
+      changeKey(code, isCapsActive, 0, keyCodeArr);
     } else if (isCapsActive) {
       isCapsActive = false;
-      changeKey(event.code, isCapsActive, 0, keyCodeArr);
+      changeKey(code, isCapsActive, 0, keyCodeArr);
     }
   }
   // shift
-  if (event.code === 'ShiftLeft' || event.code === 'ShiftRight') {
+  if (code === 'ShiftLeft' || code === 'ShiftRight') {
     isShiftActive = true;
-    changeKey(event.code, isCapsActive, localStorage.lang, keyCodeArr, isShiftActive);
+    changeKey(code, isCapsActive, localStorage.lang, keyCodeArr, isShiftActive);
   }  
 
   // backspase 
-  if (event.code === 'Backspace') {
+  if (code === 'Backspace') {
     
     if (textarea.selectionStart === textarea.selectionEnd) {
       let index = textarea.selectionStart - 1 < 0 ? 0 : textarea.selectionStart - 1;
@@ -75,7 +75,7 @@ const keydown = (event, keyCodeArr) => {
     
   }
   // del 
-  if (event.code === 'Delete') {
+  if (code === 'Delete') {
 
     if (textarea.selectionStart === textarea.selectionEnd) {
       let index = textarea.selectionStart;
@@ -91,19 +91,17 @@ const keydown = (event, keyCodeArr) => {
 
 }
 
-const keyup = (event, keyCodeArr) => {
-  if (!document.getElementById(event.code)) return;
+const keyup = (code, keyCodeArr) => {
+  if (!document.getElementById(code)) return;
 
-  const key = document.getElementById(event.code);
-  const textarea = document.querySelector('.textarea');
-  const keyCode = event.code;
+  const key = document.getElementById(code);
 
-  if (event.code === 'ShiftLeft' || event.code === 'ShiftRight') {
+  if (code === 'ShiftLeft' || code === 'ShiftRight') {
     isShiftActive = false;
-    changeKey(event.code, isCapsActive, localStorage.lang, keyCodeArr, isShiftActive);
+    changeKey(code, isCapsActive, localStorage.lang, keyCodeArr, isShiftActive);
   }  
  
-  if (!(event.code === 'CapsLock') || event.code === 'CapsLock' && !isCapsActive) key.classList.remove('key_active');
+  if (!(code === 'CapsLock') || code === 'CapsLock' && !isCapsActive) key.classList.remove('key_active');
 }
 
 export {keydown, keyup};
