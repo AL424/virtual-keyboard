@@ -22,6 +22,7 @@ body {
   border-radius: 5px;
   outline: none;
   color: #0b3682;
+  line-height: 1.5em;
 }
 
 .textarea:focus {

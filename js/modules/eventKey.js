@@ -40,6 +40,10 @@ const keydown = (event, keyCodeArr) => {
     isShiftActive = true;
     changeKey(event.code, isCapsActive, localStorage.lang, keyCodeArr, isShiftActive);
   }  
+  // tab
+  if (event.code === 'Tab') textarea.value += '    ';
+  // enter 
+  if (event.code === 'Enter') textarea.value += '\n';
 
 }
 
