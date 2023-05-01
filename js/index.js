@@ -13,8 +13,10 @@ if (!localStorage.lang) localStorage.lang = 'en';
 if (localStorage.lang === 'en') keyCodeArr.forEach(element => addKey(element.keyCode, element.key, element.type));
 if (localStorage.lang === 'ru') {
   keyCodeArr.forEach(element => {
-    if (element.type === 'service') addKey(element.keyCode, element.key, element.type);
-    else addKey(element.keyCode, element.keyRu, element.type);
+    let {keyCode, key, keyRu, type} = element;
+
+    if (type === 'service') addKey(keyCode, key, type);
+    else addKey(keyCode, keyRu, type);
   })
 }
 
