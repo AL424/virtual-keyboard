@@ -31,15 +31,15 @@ const keydown = (code, keyCodeArr) => {
     } else {
       const index = textarea.selectionStart + symbol.length;
       textarea.value = textarea.value.slice(0, textarea.selectionStart) + symbol
-                                                + textarea.value.slice(textarea.selectionEnd);
+                       + textarea.value.slice(textarea.selectionEnd);
       textarea.setSelectionRange(index, index);
     }
   }
 
   // работа с сервисными клавишами
   // переключение языка
-  const isChangeLang = code === 'ControlLeft' && document.getElementById('AltLeft').classList.contains('key_active')
-                       || code === 'AltLeft' && document.getElementById('ControlLeft').classList.contains('key_active');
+  const isChangeLang = (code === 'ControlLeft' && document.getElementById('AltLeft').classList.contains('key_active'))
+                       || (code === 'AltLeft' && document.getElementById('ControlLeft').classList.contains('key_active'));
   if (isChangeLang) changeLang(keyCodeArr, isCapsActive);
 
   // caps
@@ -62,11 +62,13 @@ const keydown = (code, keyCodeArr) => {
   if (code === 'Backspace') {
     if (textarea.selectionStart === textarea.selectionEnd) {
       const index = textarea.selectionStart - 1 < 0 ? 0 : textarea.selectionStart - 1;
-      textarea.value = textarea.value.slice(0, textarea.selectionStart - 1) + textarea.value.slice(textarea.selectionStart);
+      textarea.value = textarea.value.slice(0, textarea.selectionStart - 1)
+                       + textarea.value.slice(textarea.selectionStart);
       textarea.setSelectionRange(index, index);
     } else {
       const index = textarea.selectionStart;
-      textarea.value = textarea.value.slice(0, textarea.selectionStart) + textarea.value.slice(textarea.selectionEnd);
+      textarea.value = textarea.value.slice(0, textarea.selectionStart)
+                       + textarea.value.slice(textarea.selectionEnd);
       textarea.setSelectionRange(index, index);
     }
   }
@@ -74,11 +76,13 @@ const keydown = (code, keyCodeArr) => {
   if (code === 'Delete') {
     if (textarea.selectionStart === textarea.selectionEnd) {
       const index = textarea.selectionStart;
-      textarea.value = textarea.value.slice(0, textarea.selectionStart) + textarea.value.slice(textarea.selectionStart + 1);
+      textarea.value = textarea.value.slice(0, textarea.selectionStart)
+                       + textarea.value.slice(textarea.selectionStart + 1);
       textarea.setSelectionRange(index, index);
     } else {
       const index = textarea.selectionStart;
-      textarea.value = textarea.value.slice(0, textarea.selectionStart) + textarea.value.slice(textarea.selectionEnd);
+      textarea.value = textarea.value.slice(0, textarea.selectionStart)
+                       + textarea.value.slice(textarea.selectionEnd);
       textarea.setSelectionRange(index, index);
     }
   }
@@ -94,7 +98,7 @@ const keyup = (code, keyCodeArr) => {
     changeKey(code, isCapsActive, localStorage.lang, keyCodeArr, isShiftActive);
   }
 
-  if (!(code === 'CapsLock') || code === 'CapsLock' && !isCapsActive) key.classList.remove('key_active');
+  if (!(code === 'CapsLock') || (code === 'CapsLock' && !isCapsActive)) key.classList.remove('key_active');
 };
 
 export { keydown, keyup };
