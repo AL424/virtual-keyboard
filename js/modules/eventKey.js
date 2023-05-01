@@ -15,13 +15,28 @@ const keydown = (event, keyCodeArr) => {
   key.classList.add('key_active'); // подсвечивает заданную кнопку
 
   // работа с символами
-  if (key.classList.contains('alphanumeric')) {
-    textarea.value += key.textContent;
+  const isSymbol = key.classList.contains('alphanumeric') || ['ArrowUp', 'ArrowLeft', 'ArrowDown', 'ArrowRight'].includes(key.id) ||
+                   event.code === 'Tab' || event.code === 'Enter';
+
+  if (isSymbol) {
+    
+    let symbol = key.textContent;
+    if (event.code === 'Tab') symbol = '    ';
+    if (event.code === 'Enter') symbol = '\n';
+
+    if (textarea.selectionStart === textarea.selectionEnd) {
+      let index = textarea.selectionStart + symbol.length;
+      textarea.value = textarea.value.slice(0, textarea.selectionStart) + symbol + 
+                       textarea.value.slice(textarea.selectionStart);
+      textarea.setSelectionRange(index, index);
+    } else {
+      let index = textarea.selectionStart + symbol.length;
+      textarea.value = textarea.value.slice(0, textarea.selectionStart) + symbol + 
+                                                textarea.value.slice(textarea.selectionEnd);
+      textarea.setSelectionRange(index, index);
+    }
+
   }
-  // tab
-  if (event.code === 'Tab') textarea.value += '    ';
-  // enter 
-  if (event.code === 'Enter') textarea.value += '\n';
 
   // работа с сервисными клавишами
   // переключение языка
