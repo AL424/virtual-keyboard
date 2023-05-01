@@ -1,5 +1,5 @@
 import { changeLang } from './changeLang.js';
-import { changeKey } from './changeKey.js';
+import changeKey from './changeKey.js';
 
 // функции событий нажатия и отпуска клавиш
 

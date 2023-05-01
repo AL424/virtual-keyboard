@@ -1,6 +1,6 @@
 // добавление разметки сайта
 
-const addLayout = () => {
+export default () => {
   const main = document.createElement('main');
   main.className = 'main';
 
@@ -31,5 +31,3 @@ const addLayout = () => {
   main.append(title, textarea, keyboard, discription);
   document.body.append(main);
 };
-
-export { addLayout };

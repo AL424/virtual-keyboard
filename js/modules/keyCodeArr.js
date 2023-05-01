@@ -1,4 +1,4 @@
-export const keyCodeArr = [
+export default [
   {
     keyCode: 'Backquote',
     key: '`',

@@ -1,6 +1,6 @@
 // создание и добавление кнопок
 
-const addKey = (code, key, type) => {
+export default (code, key, type) => {
   const button = document.createElement('button');
   button.type = 'button';
   button.id = code;
@@ -11,5 +11,3 @@ const addKey = (code, key, type) => {
 
   return button;
 };
-
-export { addKey };

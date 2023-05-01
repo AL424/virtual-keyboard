@@ -1,6 +1,6 @@
-import { addLayout } from './modules/addLayout.js';
-import { keyCodeArr } from './modules/keyCodeArr.js';
-import { addKey } from './modules/addKey.js';
+import addLayout from './modules/addLayout.js';
+import keyCodeArr from './modules/keyCodeArr.js';
+import addKey from './modules/addKey.js';
 import { keydown, keyup } from './modules/eventKey.js';
 
 // добавление разметки

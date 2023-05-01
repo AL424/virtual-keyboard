@@ -1,4 +1,4 @@
-export const changeKey = (keyCode, isCapsActive, lang, keyCodeArr, isShiftActive) => {
+export default (keyCode, isCapsActive, lang, keyCodeArr, isShiftActive) => {
   // Caps Lock functional
 
   if (keyCode === 'CapsLock') {
